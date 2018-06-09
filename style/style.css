@@ -1,0 +1,42 @@
+/* preset */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, article, aside, figure, footer, header, hgroup, nav, section {margin: 0;	padding: 0;height:99%;}
+/* box model with responsive sizing*/
+input {height:20px;}
+wrapper {width:99%;height:99%;}
+span {
+width:49%;
+position:relative;
+border:1px solid black;
+display:block;
+border-radius: 5px;
+float:left;
+height:48%;
+}
+span:nth-of-type(1){background-color:rgba(255, 0, 0, 0.2);}
+span:nth-of-type(2){background-color:rgba(255, 0, 0, 0.8);}
+span:nth-of-type(3){background-color:rgba(0,0,128, 0.2);}
+span:nth-of-type(4){background-color:rgba(0,0,128, 0.8);}
+span:nth-of-type(3) {clear:both;}
+/* re-arranges colors on click */ 
+input:checked ~ span{ 
+-webkit-transform: rotate(70deg) scale(0.5);
+-ms-transform: rotate(70deg) scale(0.5);
+-o-transform: rotate(70deg) scale(0.5);
+transform: rotate(70deg) scale(0.5);
+-webkit-transition: all 0.6s ease-out;
+-ms-transition: all 0.6s ease-out;
+-o-transition: all 0.6s ease-out;
+transition: all 0.6s ease-out;}
+input:checked ~ span:nth-of-type(1){
+background-color:rgba(255, 0, 0, 0.8);} 
+input:checked ~ span:nth-of-type(2) {
+background-color:rgba(255, 0, 0, 0.2);}
+input:checked ~ span:nth-of-type(3){
+background-color:rgba(0, 0, 128, 0.8);} 
+input:checked ~ span:nth-of-type(4) {
+background-color:rgba(0,0,128, 0.2);}
+/* iphone portrait/landscape*/ 
+@media (max-width : 320px) {
+span:nth-of-type(3) { clear:none;}
+span {width:96%;}
+}
